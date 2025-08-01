@@ -73,11 +73,9 @@ This project transforms over **1.3GB of raw fashion retail data** (1 billion+ tr
 fashion-retail-warehouse-analytics/
 ├── README.md                          # Project documentation
 ├── LICENSE                            # MIT License
-├── .gitignore                         # Git ignore rules
 ├── data/                              # Data storage
 │   ├── raw/                           # Original CSV files
-│   └── processed/                     # Intermediate processed data
-├── sql/                               # SQL scripts organized by layer
+├── script/                               # SQL scripts organized by layer
 │   ├── bronze/                        # Raw data import scripts
 │   ├── silver/                        # Transformation scripts
 │   ├── gold/                          # Analytics view scripts
@@ -85,63 +83,8 @@ fashion-retail-warehouse-analytics/
 ├── docs/                              # Documentation
 │   ├── data_dictionary.md             # Comprehensive data dictionary
 │   ├── er_diagrams/                   # Entity relationship diagrams
-│   └── data_flow_diagrams/            # ETL process flow diagrams
-├── scripts/                           # Automation scripts
-└── tests/                             # Data quality tests
+└── └── data_flow_diagrams/            # ETL process flow diagrams
 ```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- SQL Database Engine (PostgreSQL, MySQL, SQL Server, etc.)
-- Python 3.8+ (for automation scripts)
-- 2GB+ available storage space
-
-### Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/fashion-retail-warehouse-analytics.git
-   cd fashion-retail-warehouse-analytics
-   ```
-
-2. **Download the dataset**
-   - Download the [Global Fashion Retail Sales dataset](https://www.kaggle.com/datasets/datafiniti/global-fashion-retail-sales) from Kaggle
-   - Extract CSV files to the `data/raw/` directory
-
-3. **Set up database**
-   ```bash
-   # Update connection strings in scripts/setup_database.py
-   python scripts/setup_database.py
-   ```
-
-4. **Run Bronze layer setup**
-   ```sql
-   -- Execute bronze layer scripts
-   \i sql/bronze/create_bronze_schema.sql
-   \i sql/bronze/import_raw_data.sql
-   ```
-
-5. **Execute Silver layer transformations**
-   ```sql
-   -- Create lookup and dimension tables
-   \i sql/silver/create_lookup_tables.sql
-   \i sql/silver/create_dimension_tables.sql
-   \i sql/silver/create_fact_tables.sql
-   \i sql/silver/data_transformations.sql
-   ```
-
-6. **Create Gold layer views**
-   ```sql
-   -- Create analytics views
-   \i sql/gold/create_salesmart_view.sql
-   \i sql/gold/create_invoice_details_view.sql
-   ```
-
-7. **Run data quality checks**
-   ```sql
-   \i sql/quality_checks/data_quality_tests.sql
-   ```
 
 ## 📊 Database Schema
 
@@ -164,20 +107,6 @@ fashion-retail-warehouse-analytics/
 - **INVOICE_DETAILS**: Detailed invoice-level transaction data
 
 For detailed schema information, see [Data Dictionary](docs/data_dictionary.md).
-
-## 🔍 Data Quality & Testing
-
-The project implements comprehensive data quality measures:
-
-- **Completeness Checks**: Validation for required fields and referential integrity
-- **Consistency Checks**: Cross-table validation and business rule enforcement
-- **Accuracy Checks**: Data type validation and range checking
-- **Uniqueness Checks**: Duplicate detection and surrogate key validation
-
-Run quality checks using:
-```sql
-\i sql/quality_checks/data_quality_tests.sql
-```
 
 ## 📈 Analytics & Use Cases
 
@@ -203,18 +132,6 @@ This data warehouse supports various analytical use cases:
 - [Data Dictionary](docs/data_dictionary.md) - Comprehensive data definitions
 - [ER Diagrams](docs/er_diagrams/) - Visual database schema documentation
 - [Data Flow Diagrams](docs/data_flow_diagrams/) - ETL process visualization
-- [SQL Documentation](sql/) - Detailed script documentation
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-### Development Guidelines
-- Follow SQL coding standards and naming conventions
-- Add comprehensive comments to all SQL scripts
-- Update documentation for any schema changes
-- Include data quality tests for new transformations
-- Test thoroughly before submitting pull requests
 
 ## 📄 License
 
@@ -223,7 +140,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - **Kaggle** for providing the Global Fashion Retail Sales dataset
-- **Datafiniti** for the original data collection and curation
 - The open-source community for tools and inspiration
 
 ## 📞 Contact
