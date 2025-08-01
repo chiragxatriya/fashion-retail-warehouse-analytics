@@ -79,11 +79,11 @@ fashion-retail-warehouse-analytics/
 │   ├── bronze/                        # Raw data import scripts
 │   ├── silver/                        # Transformation scripts
 │   ├── gold/                          # Analytics view scripts
-│   └── quality_checks/                # Data quality validation
+│   └── indexes.sql/                # Data quality validation
 ├── docs/                              # Documentation
 │   ├── data_dictionary.md             # Comprehensive data dictionary
-│   ├── er_diagrams/                   # Entity relationship diagrams
-└── └── data_flow_diagrams/            # ETL process flow diagrams
+│   ├── er_diagram.png/                   # Entity relationship diagrams
+└── └── data_flow.png/            # ETL process flow diagrams
 ```
 
 ## 📊 Database Schema
