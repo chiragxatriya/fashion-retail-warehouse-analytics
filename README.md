@@ -38,44 +38,6 @@ This project covers the entire analytics pipeline, from raw data ingestion to in
 - **Interactive Power BI Reporting**:
   - Rich dashboards using best-practice SQL views and slicer-supporting dimensions.
 
----
-
-## Getting Started
-
-1. **Clone the repository**  
-   `git clone https://github.com/YOUR_GITHUB_USERNAME/fashion-retail-warehouse-analytics.git`
-
-2. **Load Raw Data**  
-   - Place the Kaggle CSVs into `/raw_data/`
-   - Run `/sql/bronze/dml/import_raw_data.sql` to load CSVs into the bronze schema.
-
-3. **Run Transformations**  
-   - Execute scripts in `/sql/silver/` to transform, cleanse, deduplicate, and enrich data (see `/sql/silver/dml/transform_bronze_to_silver.sql`).
-
-4. **Create Lookup Tables**  
-   - Run `/sql/silver/lookup/create_lookup_tables.sql` after silver tables.
-
-5. **Prepare Final Reporting Views**  
-   - Use `/sql/gold/views/` to create `salesmart` and `invoice_details` views.
-
-6. **Indexing & Optimization**  
-   - Apply `/sql/optimization/create_indexes.sql` for best query performance.
-
-7. **Quality Checks**  
-   - Run quality scripts in `/sql/bronze/quality_checks/` and `/sql/silver/quality_checks/`.
-
-8. **Open the Power BI Dashboard**  
-   - Use `/powerbi/FashionRetailDashboard.pbix` to visualize and explore data.
-
----
-
-## Documentation
-
-- **ER Diagram**: ![ER Diagram](docs/ERD.png)
-- **Data Dictionary**: [docs/data_dictionary.md](docs/data_dictionary.md)
-- **Architecture**: [docs/architecture.md](docs/architecture.md)
-
----
 
 ## License
 
@@ -86,7 +48,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Credits
 
 - Kaggle [Global Fashion Retail Sales](https://www.kaggle.com/datasets/datafiniti/global-fashion-retail-sales)
-- Built by [YOUR NAME] for public portfolio
+- Built by [CHIRAG KSHATRIYA] for public portfolio
 
 ---
 
